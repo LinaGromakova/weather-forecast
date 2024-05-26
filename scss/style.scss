@@ -17,6 +17,7 @@ body {
   background: center/cover url('../img/background-desk.jpg') no-repeat;
   height: 100vh;
   .card-forecast {
+    position: relative;
     color: #fff;
     background-color: rgba($color: #000, $alpha: 0.4);
     border-radius: 20px;

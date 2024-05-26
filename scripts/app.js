@@ -23,8 +23,15 @@ async function getWeather() {
     `;
     infoForecastHTML.innerHTML = generateHTML;
   }
+
+  let date = '';
+  response.dt >= response.sys.sunrise && response.dt < response.sys.sunset
+    ? (date = 'day')
+    : (date = 'night');
   generateHTML = `
-        <img src="img/${response.weather[0].main}.png" alt="weather-icon" />
+        <img src="img/${
+          response.weather[0].main
+        }-${date}.png" alt="weather-icon" />
         <div class="temperature">
           <span>${Math.floor(response.main.temp).toFixed(0)}</span>
           <span class="celsius">℃</span>
