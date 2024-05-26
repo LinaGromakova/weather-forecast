@@ -31,7 +31,7 @@ async function getWeather() {
     : (date = 'night');
   generateHTML = `
     <div class="wrapper">
-      <img src="img/${
+      <img src="img/icons/${
         response.weather[0].main
       }-${date}.png" alt="weather-icon" />
       <div class="temperature">
