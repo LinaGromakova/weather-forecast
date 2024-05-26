@@ -1,9 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Advent+Pro:ital,wght@0,100..900;1,100..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="css/style.min.css" />
     <title>Weather Forecast</title>
   </head>
-  <body></body>
+  <body>
+    <div class="card-forecast">
+      <form action="#">
+        <input
+          type="text"
+          id="inp"
+          placeholder="Please, enter your city"
+          required
+          autocomplete="off"
+        />
+        <button id="btn">&#x1F50E;&#xFE0E;</button>
+      </form>
+      <div class="card-forecast-info js-info-forecast"></div>
+    </div>
+
+    <script src="scripts/app.js"></script>
+  </body>
 </html>

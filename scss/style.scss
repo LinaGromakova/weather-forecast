@@ -1,0 +1,133 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+h3,
+span,
+p {
+  font-size: inherit;
+  font-weight: inherit;
+}
+body {
+  font-family: 'Roboto Condensed', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: center/cover url('../img/background-desk.jpg') no-repeat;
+  height: 100vh;
+  .card-forecast {
+    color: #fff;
+    background-color: rgba($color: #000, $alpha: 0.4);
+    border-radius: 20px;
+    border: 1px solid rgba($color: #000, $alpha: 0.2);
+    backdrop-filter: blur(10px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 1.5rem;
+    form {
+      position: relative;
+      input {
+        background-color: transparent;
+        font-family: 'Roboto Condensed', sans-serif;
+        width: 16rem;
+        height: 35px;
+        border-radius: 10px;
+        border: 1px solid rgba($color: #fff, $alpha: 0.6);
+        color: #fff;
+        outline: none;
+        font-size: 20px;
+        padding: 2.5px 30px 0px 10px;
+        &::placeholder {
+          color: rgba($color: #fff, $alpha: 0.6);
+        }
+      }
+      button {
+        position: absolute;
+        cursor: pointer;
+        font-size: 20px;
+        right: 7px;
+        top: 2px;
+        color: #fff;
+        background-color: transparent;
+        border: none;
+        outline: none;
+      }
+    }
+
+    .card-forecast-info {
+      text-align: center;
+      img {
+        max-width: 200px;
+        padding: 10px 0px;
+      }
+
+      .temperature {
+        font-size: 65px;
+        font-weight: 700;
+        letter-spacing: -6px;
+        .celsius {
+          font-size: 15px;
+          vertical-align: 40px;
+        }
+      }
+    }
+    h3 {
+      font-size: 30px;
+    }
+    .column-wrapper-values {
+      display: flex;
+
+      .column-values {
+        display: flex;
+        align-items: center;
+      }
+
+      .column {
+        h6 {
+          font-size: 18px;
+        }
+        h6 + h6 {
+          font-size: 14px;
+        }
+        .symbol {
+          font-size: 65px;
+          margin-right: 6px;
+          vertical-align: top;
+          display: inline;
+          vertical-align: 40px;
+        }
+      }
+      .column-values:first-child {
+        margin-right: 30px;
+        .symbol {
+          vertical-align: 30px;
+        }
+      }
+    }
+  }
+}
+.error-title {
+  font-size: 155px;
+  padding: 15px 0px 5px 0px;
+  filter: drop-shadow(5px 5px 6px rgba(255, 0, 0, 0.707));
+  text-shadow: -6px 4px 10px rgb(28, 212, 212);
+}
+.error-subtitle {
+  font-size: 20px;
+  padding: 5px 0px;
+  filter: drop-shadow(5px 5px 6px rgba(255, 0, 0, 0.707));
+  text-shadow: -6px 4px 10px rgb(28, 212, 212);
+}
+.error-par {
+  font-size: 15px;
+  color: aqua;
+  text-shadow: 2px 2px 4px red;
+  padding: 10px 0px;
+}
+@media (max-aspect-ratio: 9/16) {
+  body {
+    background: center/cover url('../img/background-mobile.jpg') no-repeat !important;
+  }
+}
