@@ -21,8 +21,6 @@ body {
   height: 100vh;
 }
 body .card-forecast {
-  position: relative;
-  overflow: hidden;
   color: #fff;
   background-color: rgba(0, 0, 0, 0.4);
   border-radius: 20px;
@@ -33,6 +31,10 @@ body .card-forecast {
   flex-direction: column;
   align-items: center;
   padding: 20px 1rem;
+  height: auto;
+  min-height: 50px;
+  transition: min-height 1s;
+  animation: show 1s;
 }
 body .card-forecast form {
   position: relative;
@@ -136,5 +138,17 @@ body .card-forecast .column-wrapper-values .column-values:first-child .symbol {
 @media (max-aspect-ratio: 9/16) {
   body {
     background: center/cover url("../img/background-mobile.jpg") no-repeat !important;
+  }
+}
+.wrapper {
+  animation: show 1s ease;
+}
+
+@keyframes show {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }/*# sourceMappingURL=style.css.map */
