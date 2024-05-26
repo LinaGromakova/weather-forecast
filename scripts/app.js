@@ -6,7 +6,8 @@ const infoForecastHTML = document.querySelector('.js-info-forecast');
 let cityValue = '';
 let generateHTML = '';
 
-btnEl.addEventListener('click', () => {
+btnEl.addEventListener('click', (e) => {
+  e.preventDefault();
   cityValue = inpEl.value;
   getWeather();
 });

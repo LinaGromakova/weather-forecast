@@ -17,7 +17,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: center/cover url("../img/background-desk.jpg") no-repeat;
+  background: center/cover url("../img/background/background-desk.jpg") no-repeat;
   height: 100vh;
 }
 body .card-forecast {
@@ -137,7 +137,7 @@ body .card-forecast .column-wrapper-values .column-values:first-child .symbol {
 
 @media (max-aspect-ratio: 9/16) {
   body {
-    background: center/cover url("../img/background-mobile.jpg") no-repeat !important;
+    background: center/cover url("../img/background/background-mobile.jpg") no-repeat !important;
   }
 }
 .wrapper {
