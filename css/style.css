@@ -12,6 +12,7 @@ p {
 }
 
 body {
+  overflow: hidden;
   font-family: "Roboto Condensed", sans-serif;
   display: flex;
   justify-content: center;
@@ -21,6 +22,7 @@ body {
 }
 body .card-forecast {
   position: relative;
+  overflow: hidden;
   color: #fff;
   background-color: rgba(0, 0, 0, 0.4);
   border-radius: 20px;
@@ -30,7 +32,7 @@ body .card-forecast {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 20px 1.5rem;
+  padding: 20px 1rem;
 }
 body .card-forecast form {
   position: relative;
@@ -68,7 +70,7 @@ body .card-forecast .card-forecast-info {
   text-align: center;
 }
 body .card-forecast .card-forecast-info img {
-  max-width: 200px;
+  max-width: 170px;
   padding: 10px 0px;
 }
 body .card-forecast .card-forecast-info .temperature {

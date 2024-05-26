@@ -58,6 +58,10 @@ async function getWeather() {
           </div>
         </div>
       `;
-
+  localStorage.setItem('card', JSON.stringify(generateHTML));
+  localStorage.setItem('city', inpEl.value);
   return (infoForecastHTML.innerHTML = generateHTML);
 }
+
+infoForecastHTML.innerHTML = JSON.parse(localStorage.getItem('card'));
+inpEl.value = localStorage.getItem('city');
