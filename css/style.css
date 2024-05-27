@@ -12,7 +12,6 @@ p {
 }
 
 body {
-  overflow: hidden;
   font-family: "Roboto Condensed", sans-serif;
   display: flex;
   justify-content: center;
@@ -39,6 +38,11 @@ body .card-forecast {
 body .card-forecast form {
   position: relative;
 }
+body .card-forecast form .location-icons {
+  position: absolute;
+  top: 5px;
+  left: 7px;
+}
 body .card-forecast form input {
   background-color: transparent;
   font-family: "Roboto Condensed", sans-serif;
@@ -49,7 +53,8 @@ body .card-forecast form input {
   color: #fff;
   outline: none;
   font-size: 20px;
-  padding: 2.5px 30px 0px 10px;
+  padding: 0px 30px 0px 40px;
+  margin-bottom: 10px;
 }
 body .card-forecast form input::-moz-placeholder {
   color: rgba(255, 255, 255, 0.6);
@@ -60,7 +65,8 @@ body .card-forecast form input::placeholder {
 body .card-forecast form button {
   position: absolute;
   cursor: pointer;
-  font-size: 20px;
+  width: 35px;
+  height: 35px;
   right: 7px;
   top: 2px;
   color: #fff;
@@ -89,6 +95,7 @@ body .card-forecast h3 {
 }
 body .card-forecast .column-wrapper-values {
   display: flex;
+  margin: 20px 0px;
 }
 body .card-forecast .column-wrapper-values .column-values {
   display: flex;
@@ -101,17 +108,10 @@ body .card-forecast .column-wrapper-values .column h6 + h6 {
   font-size: 14px;
 }
 body .card-forecast .column-wrapper-values .column .symbol {
-  font-size: 65px;
   margin-right: 6px;
-  vertical-align: top;
-  display: inline;
-  vertical-align: 40px;
 }
 body .card-forecast .column-wrapper-values .column-values:first-child {
   margin-right: 30px;
-}
-body .card-forecast .column-wrapper-values .column-values:first-child .symbol {
-  vertical-align: 30px;
 }
 
 .error-title {
@@ -138,6 +138,14 @@ body .card-forecast .column-wrapper-values .column-values:first-child .symbol {
 @media (max-aspect-ratio: 9/16) {
   body {
     background: center/cover url("../img/background/background-mobile.jpg") no-repeat !important;
+  }
+}
+@media (max-width: 768px) {
+  .symbol {
+    vertical-align: 20px !important;
+  }
+  .card-forecast {
+    padding: 20px 0.3rem !important;
   }
 }
 .wrapper {
