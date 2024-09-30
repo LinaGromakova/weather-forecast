@@ -20,10 +20,10 @@ body {
   height: 100lvh;
 }
 body .card-forecast:has(.wrapper) {
-  max-height: 100lvh;
+  max-height: 100dvh;
 }
 body .card-forecast:has(.error-wrapper) {
-  max-height: 100lvh;
+  max-height: 100dvh;
 }
 body .card-forecast {
   color: #fff;
