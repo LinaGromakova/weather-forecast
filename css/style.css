@@ -23,7 +23,7 @@ body .card-forecast:has(.wrapper) {
   max-height: 100lvh;
 }
 body .card-forecast:has(.error-wrapper) {
-  max-height: 70lvh;
+  max-height: 100lvh;
 }
 body .card-forecast {
   color: #fff;
