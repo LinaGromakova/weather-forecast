@@ -16,8 +16,14 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: center/cover url("../img/background/background-desk.jpg") no-repeat;
+  background: center/cover url("../img/background/background-desk.webp") no-repeat;
   height: 100vh;
+}
+body .card-forecast:has(.wrapper) {
+  max-height: 100vh;
+}
+body .card-forecast:has(.error-wrapper) {
+  max-height: 70vh;
 }
 body .card-forecast {
   color: #fff;
@@ -27,21 +33,23 @@ body .card-forecast {
   -webkit-backdrop-filter: blur(10px);
           backdrop-filter: blur(10px);
   display: flex;
+  height: auto;
+  max-height: 87px;
+  overflow: hidden;
   flex-direction: column;
   align-items: center;
   padding: 20px 1rem;
-  height: auto;
-  min-height: 50px;
-  transition: min-height 1s;
-  animation: show 1s;
+  transition: max-height 2s;
+  animation: elAnim 0.5s ease-in-out both;
 }
 body .card-forecast form {
   position: relative;
 }
-body .card-forecast form .location-icons {
+body .card-forecast form .location-icon {
   position: absolute;
   top: 5px;
   left: 7px;
+  animation: elAnim 0.5s ease-in 0.2s both;
 }
 body .card-forecast form input {
   background-color: transparent;
@@ -55,6 +63,7 @@ body .card-forecast form input {
   font-size: 20px;
   padding: 0px 30px 0px 40px;
   margin-bottom: 10px;
+  animation: elAnim 0.5s ease-in 0.25s both;
 }
 body .card-forecast form input::-moz-placeholder {
   color: rgba(255, 255, 255, 0.6);
@@ -73,6 +82,7 @@ body .card-forecast form button {
   background-color: transparent;
   border: none;
   outline: none;
+  animation: elAnim 0.5s ease-in 0.25s both;
 }
 body .card-forecast .card-forecast-info {
   text-align: center;
@@ -80,11 +90,13 @@ body .card-forecast .card-forecast-info {
 body .card-forecast .card-forecast-info img {
   max-width: 170px;
   padding: 10px 0px;
+  animation: elAnim 0.5s ease-in 0.3s both;
 }
 body .card-forecast .card-forecast-info .temperature {
   font-size: 65px;
   font-weight: 700;
   letter-spacing: -6px;
+  animation: elAnim 0.5s ease-in 0.6s both;
 }
 body .card-forecast .card-forecast-info .temperature .celsius {
   font-size: 15px;
@@ -92,6 +104,7 @@ body .card-forecast .card-forecast-info .temperature .celsius {
 }
 body .card-forecast h3 {
   font-size: 30px;
+  animation: elAnim 0.5s ease-in 0.9s both;
 }
 body .card-forecast .column-wrapper-values {
   display: flex;
@@ -100,6 +113,7 @@ body .card-forecast .column-wrapper-values {
 body .card-forecast .column-wrapper-values .column-values {
   display: flex;
   align-items: center;
+  animation: elAnim 0.5s ease-in 1.3s both;
 }
 body .card-forecast .column-wrapper-values .column h6 {
   font-size: 18px;
@@ -115,29 +129,29 @@ body .card-forecast .column-wrapper-values .column-values:first-child {
 }
 
 .error-title {
-  font-size: 155px;
-  padding: 15px 0px 5px 0px;
-  filter: drop-shadow(5px 5px 6px rgba(255, 0, 0, 0.707));
-  text-shadow: -6px 4px 10px rgb(28, 212, 212);
+  font-size: 165px;
+  animation: elAnim 0.5s ease-in both;
+  font-weight: 200;
+  padding-top: 15px;
 }
 
 .error-subtitle {
   font-size: 20px;
   padding: 5px 0px;
-  filter: drop-shadow(5px 5px 6px rgba(255, 0, 0, 0.707));
-  text-shadow: -6px 4px 10px rgb(28, 212, 212);
+  font-weight: 200;
+  animation: elAnim 0.5s ease-in 0.3s both !important;
 }
 
 .error-par {
   font-size: 15px;
-  color: aqua;
-  text-shadow: 2px 2px 4px red;
+  color: #f88c37;
   padding: 10px 0px;
+  animation: elAnim 0.5s ease-in 0.6s both;
 }
 
-@media (max-aspect-ratio: 9/16) {
+@media (max-width: 768px) or (orientation: portrait) {
   body {
-    background: center/cover url("../img/background/background-mobile.jpg") no-repeat !important;
+    background: center/cover url("../img/background/background-mobile.webp") no-repeat !important;
   }
 }
 @media (max-width: 768px) {
@@ -148,15 +162,28 @@ body .card-forecast .column-wrapper-values .column-values:first-child {
     padding: 20px 0.7rem !important;
   }
 }
-.wrapper {
-  animation: show 1s ease;
+.el-anim {
+  filter: blur(5px);
+  opacity: 0;
+  transform: translateY(10px);
 }
 
-@keyframes show {
-  0% {
-    opacity: 0;
-  }
-  100% {
+.el-anim_left {
+  filter: blur(5px);
+  opacity: 0;
+  transform: translateX(-10px);
+}
+
+.el-anim_right {
+  filter: blur(5px);
+  opacity: 0;
+  transform: translateX(10px);
+}
+
+@keyframes elAnim {
+  to {
+    filter: blur(0px);
     opacity: 1;
+    transform: translate(0px);
   }
 }/*# sourceMappingURL=style.css.map */

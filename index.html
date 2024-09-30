@@ -7,31 +7,17 @@
       href="https://fonts.googleapis.com/css2?family=Advent+Pro:ital,wght@0,100..900;1,100..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
     />
-    <link
-      rel="apple-touch-icon"
-      sizes="180x180"
-      href="img/favicon_io/apple-touch-icon.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="img/favicon_io/favicon-32x32.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="16x16"
-      href="img/favicon_io/favicon-16x16.png"
-    />
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicon_io/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon_io/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon_io/favicon-16x16.png" />
 
     <link rel="stylesheet" href="css/style.min.css" />
     <title>Weather Forecast</title>
   </head>
   <body>
-    <div class="card-forecast">
+    <div class="card-forecast el-anim">
       <form action="#">
-        <div class="location-icons">
+        <div class="location-icon el-anim_left">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             height="25px"
@@ -50,8 +36,9 @@
           placeholder="Please, enter your city"
           required
           autocomplete="off"
+          class="el-anim"
         />
-        <button id="btn">
+        <button class="el-anim_right" id="btn" title="Search">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             height="25px"
