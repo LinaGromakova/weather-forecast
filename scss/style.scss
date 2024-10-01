@@ -17,10 +17,10 @@ body {
   background: center/cover url('../img/background/background-desk.webp') no-repeat;
   height: 100lvh;
   .card-forecast:has(.wrapper) {
-    max-height: 100dvh;
+    max-height: 600px;
   }
   .card-forecast:has(.error-wrapper) {
-    max-height: 100dvh;
+    max-height: 400px;
   }
   .card-forecast {
     color: #fff;
